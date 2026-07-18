@@ -1,0 +1,68 @@
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+html.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+html.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+html.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.website-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  font-family: var(--font-body);
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  background: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid red;
+  background: transparent;
+}

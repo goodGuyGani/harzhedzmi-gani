@@ -1,0 +1,15 @@
+/* Design tokens */
+:root {
+  font-size: 16px;
+  --color-text: #fff;
+  --color-bg: #0a0a0a;
+  --color-bg-alt: hsl(15deg 55% 6%);
+  --color-link: #c27e73;
+  --color-link-hover: #fff;
+  --color-title: #b9284d;
+  --color-accent: #b9284d;
+  --color-accent-hot: #e93f33;
+  --color-ink: #f4ebe3;
+  --font-display: "stinger-variable", sans-serif;
+  --font-body: "tenon", sans-serif;
+}
