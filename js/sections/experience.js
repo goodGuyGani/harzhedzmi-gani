@@ -1,21 +1,13 @@
 let experienceMotionInitialized = false;
 
-export function initExperienceMotion() {
-  if (experienceMotionInitialized) return;
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    return;
-  }
-
-  experienceMotionInitialized = true;
-  gsap.registerPlugin(ScrollTrigger);
-
-  const header = document.querySelector(".experience__header");
-  const headerTitles = gsap.utils.toArray(".experience__header .title");
-  const roles = gsap.utils.toArray(".experience-role");
-  if (!headerTitles.length && !roles.length) return;
+function observeRevealSection({ headerSelector, itemSelector, headerTitlesSelector }) {
+  const header = document.querySelector(headerSelector);
+  const headerTitles = gsap.utils.toArray(headerTitlesSelector);
+  const items = gsap.utils.toArray(itemSelector);
+  if (!headerTitles.length && !items.length) return;
 
   gsap.set(headerTitles, { autoAlpha: 0, y: 18 });
-  gsap.set(roles, { autoAlpha: 0, y: 16 });
+  gsap.set(items, { autoAlpha: 0, y: 16 });
 
   const revealHeader = () => {
     gsap.to(headerTitles, {
@@ -28,12 +20,12 @@ export function initExperienceMotion() {
     });
   };
 
-  const revealRole = (role) => {
-    if (role.dataset.revealed === "1") return;
-    role.dataset.revealed = "1";
-    role.classList.add("is-inview");
+  const revealItem = (item) => {
+    if (item.dataset.revealed === "1") return;
+    item.dataset.revealed = "1";
+    item.classList.add("is-inview");
 
-    gsap.to(role, {
+    gsap.to(item, {
       autoAlpha: 1,
       y: 0,
       duration: 0.65,
@@ -47,14 +39,14 @@ export function initExperienceMotion() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
-        if (entry.target.classList.contains("experience__header")) {
+        if (entry.target === header) {
           revealHeader();
           observer.unobserve(entry.target);
           return;
         }
 
-        if (entry.target.classList.contains("experience-role")) {
-          revealRole(entry.target);
+        if (entry.target.matches(itemSelector)) {
+          revealItem(entry.target);
           observer.unobserve(entry.target);
         }
       });
@@ -66,7 +58,29 @@ export function initExperienceMotion() {
   );
 
   if (header) observer.observe(header);
-  roles.forEach((role) => observer.observe(role));
+  items.forEach((item) => observer.observe(item));
+}
+
+export function initExperienceMotion() {
+  if (experienceMotionInitialized) return;
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+    return;
+  }
+
+  experienceMotionInitialized = true;
+  gsap.registerPlugin(ScrollTrigger);
+
+  observeRevealSection({
+    headerSelector: ".work__header",
+    itemSelector: ".work-card",
+    headerTitlesSelector: ".work__header .title",
+  });
+
+  observeRevealSection({
+    headerSelector: ".experience__header",
+    itemSelector: ".experience-role",
+    headerTitlesSelector: ".experience__header .title",
+  });
 }
 
 export function initExperience() {

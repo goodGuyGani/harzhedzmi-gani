@@ -88,10 +88,10 @@
             />
           </svg>
           <p class="content__text" style="color: #e2d2c3">
-            I am a Lead Software Developer building production web systems with
-            React, Next.js, Node.js, and MySQL. I care about secure architecture,
-            clean interfaces, and shipping features that hold up under real
-            traffic—from payments and auth to real-time product work.
+            I am a Lead Software Developer at PHILTECH, leading a team of about
+            four on production fintech and payout systems—React, Next.js,
+            Node.js, and MySQL. I care about secure architecture, clean
+            interfaces, and features that hold up under real transaction load.
           </p>
         </div>
       </div>
@@ -234,6 +234,79 @@
         </div>
       </div>
 
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="work__header title-wrap">
+          <span class="title title--up" id="work-title">Selected</span>
+          <span class="title title--down">Work</span>
+        </div>
+
+        <div class="work-list">
+          <article class="work-card">
+            <div class="work-card__meta">
+              <span class="work-card__index">01</span>
+              <span class="work-card__tag">Fintech · Production</span>
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">PHILTECH PLATFORM</h3>
+              <p class="work-card__lede">
+                End-to-end ownership of a live payout and ATM cash-out platform
+                for the Philippine market — payments, bank rails, KYC, and
+                admin ops.
+              </p>
+              <ul class="work-card__points">
+                <li>
+                  Led ~4 developers; daily ATM volume ~PHP 1M, peaking ~PHP 7M
+                  during 4Ps periods
+                </li>
+                <li>
+                  Connected 93 banks/e-wallets (InstaPay/PESONet, RCBC QR) with
+                  real-time balance verification
+                </li>
+                <li>
+                  Hardened PayMongo flows, auth/RBAC, and KYC (face match + OCR)
+                  for production fraud resistance
+                </li>
+              </ul>
+              <p class="work-card__stack">
+                Next.js · TypeScript · Prisma · Redis · PayMongo · Vercel
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta">
+              <span class="work-card__index">02</span>
+              <span class="work-card__tag">Realtime · Gaming</span>
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">TONGITS MULTIPLAYER</h3>
+              <p class="work-card__lede">
+                First shipped game on a game-provider API stack — real-time
+                multiplayer Tongits from Express/Socket.IO backend to a Pixi
+                client.
+              </p>
+              <ul class="work-card__points">
+                <li>
+                  Designed the provider API framework for integrating and
+                  delivering gaming services
+                </li>
+                <li>
+                  Built React Pixi + TypeScript + Vite frontend with Redux
+                  bridge for Pixi state
+                </li>
+                <li>
+                  Docker Compose deploys with Redis caching for live play and
+                  third-party exchanges
+                </li>
+              </ul>
+              <p class="work-card__stack">
+                React Pixi · Vite · Express · Socket.IO · Redis · Docker
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="experience">
         <div class="experience__header title-wrap">
           <span class="title title--up">My</span>
@@ -258,19 +331,21 @@
                 · Zamboanga City
               </p>
               <p class="experience-role__lede">
-                Production systems for payments, security, and scale — shipping
-                under real traffic with zero-downtime releases.
+                Lead a team of ~4 on payments, ATM cash-out, bank/e-wallet
+                rails, and ops tooling — shipping under real traffic.
               </p>
               <ul class="experience-role__points">
                 <li>
-                  Pyramid referral platform processing thousands of daily
-                  transactions
+                  Referral/payout engine with daily ATM volume around PHP 1M,
+                  peaking near PHP 7M during 4Ps payout periods
                 </li>
                 <li>
-                  JWT + Redis auth, RBAC, CSRF, CSP across 97+ endpoints
+                  93 Philippine banks and e-wallets via InstaPay/PESONet and
+                  RCBC QR, with real-time balance checks
                 </li>
                 <li>
-                  PayMongo webhooks, KYC (Face-API / OCR), React + Next.js UI
+                  PayMongo verification, KYC (face match + OCR), and hardened
+                  auth (JWT, Redis sessions, RBAC)
                 </li>
               </ul>
             </div>
@@ -336,7 +411,7 @@
           <article class="experience-role">
             <div class="experience-role__meta">
               <span class="experience-role__index">04</span>
-              <time datetime="2024-06">June 2024 — Present</time>
+              <time datetime="2024-06">June 2024 — October 2024</time>
             </div>
             <div class="experience-role__body">
               <h3 class="experience-role__title">SOFTWARE ENGINEER INTERN</h3>
