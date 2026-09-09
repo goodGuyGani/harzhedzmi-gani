@@ -5,6 +5,7 @@ import {
   setPreloaderProgress,
   finishPreloader,
   bindIntroScrollHint,
+  lockPreloaderScroll,
 } from "./sections/preloader.js";
 import { initAbout } from "./sections/about.js";
 import { initSkills } from "./sections/skills.js";
@@ -21,6 +22,8 @@ const boot = async () => {
   setPreloaderProgress(35);
 
   initSmoothScrolling();
+  // Lenis boots mid-preload — keep it stopped until the intro exits
+  lockPreloaderScroll();
   bindIntroScrollHint();
 
   // Section modules (order mirrors page flow)

@@ -61,12 +61,12 @@ export class AboutItem {
         this.DOM.image,
         {
           transformOrigin: "50% 50%",
-          filter: "brightness(100%)",
+          filter: "none",
         },
         {
           ease: "none",
           scale: isCircle ? 1.2 : 1,
-          filter: "brightness(150%)",
+          filter: "none",
         },
         0
       );

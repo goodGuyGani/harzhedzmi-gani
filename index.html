@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-preloading">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/qsy7khk.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   </head>
-  <body>
+  <body class="is-preloading">
     <div class="website-content">
       <div class="shape-layer" aria-hidden="true">
         <div class="shape"></div>
@@ -81,7 +81,7 @@
               </mask>
             </defs>
             <image
-              xlink:href="./img/ganineo.jpg"
+              xlink:href="./img/about-me.jpg"
               width="896"
               height="1344"
               mask="url(#circleMask)"
@@ -236,95 +236,6 @@
           </div>
         </div>
       </div>
-
-      <section class="work" id="work" aria-labelledby="work-title">
-        <div class="work__header title-wrap">
-          <span class="title title--up" id="work-title">Side</span>
-          <span class="title title--down">Works</span>
-        </div>
-        <p class="section-link-hint">
-          Project titles with underline are clickable — open the live demo.
-        </p>
-
-        <div class="work-list">
-          <article class="work-card">
-            <div class="work-card__meta">
-              <span class="work-card__index">01</span>
-              <span class="work-card__tag">ML · Product</span>
-            </div>
-            <div class="work-card__body">
-              <h3 class="work-card__title">
-                <a
-                  href="https://animal-kingdom-v1.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >ANIMAL KINGDOM</a
-                >
-              </h3>
-              <p class="work-card__lede">
-                Browser-based animal discovery app with on-device image
-                recognition, breed catalogs, quizzes, and favorites — shipped
-                on Vercel.
-              </p>
-              <ul class="work-card__points">
-                <li>
-                  Client-side animal recognition with TensorFlow.js / MobileNet
-                  and Transformers running in the browser
-                </li>
-                <li>
-                  Discover, search, compare, and learn flows for dogs, cats,
-                  and wildlife with daily animal features
-                </li>
-                <li>
-                  Responsive React UI with Framer Motion, local favorites, and
-                  a live deploy at animal-kingdom-v1.vercel.app
-                </li>
-              </ul>
-              <p class="work-card__stack">
-                React · Vite · TensorFlow.js · Framer Motion · Tailwind · Vercel
-              </p>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <div class="work-card__meta">
-              <span class="work-card__index">02</span>
-              <span class="work-card__tag">Learning · Local-first</span>
-            </div>
-            <div class="work-card__body">
-              <h3 class="work-card__title">
-                <a
-                  href="https://knowledge-vault-six.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >KNOWLEDGE VAULT</a
-                >
-              </h3>
-              <p class="work-card__lede">
-                Private workshop for interactive notes, a 3D knowledge graph,
-                and study tools — no account, no server database.
-              </p>
-              <ul class="work-card__points">
-                <li>
-                  Notes that run: HTML, CSS, and JavaScript execute inside each
-                  note (timers, quizzes, canvases)
-                </li>
-                <li>
-                  3D Sphere maps connections between notes so structure is
-                  visible, not just folders
-                </li>
-                <li>
-                  Flashcards and quizzes with SM-2 spaced repetition, stored
-                  privately in the browser via localStorage
-                </li>
-              </ul>
-              <p class="work-card__stack">
-                Next.js · TypeScript · Three.js · localStorage · Vercel
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
 
       <section class="experience">
         <div class="experience__header title-wrap">
@@ -486,6 +397,95 @@
                 <li>Support for 100+ employees with faster recovery</li>
                 <li>~30% less system downtime from infrastructure fixes</li>
               </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="work__header title-wrap">
+          <span class="title title--up" id="work-title">Side</span>
+          <span class="title title--down">Works</span>
+        </div>
+        <p class="section-link-hint">
+          Project titles with underline are clickable — open the live demo.
+        </p>
+
+        <div class="work-list">
+          <article class="work-card">
+            <div class="work-card__meta">
+              <span class="work-card__index">01</span>
+              <span class="work-card__tag">ML · Product</span>
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">
+                <a
+                  href="https://animal-kingdom-v1.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ANIMAL KINGDOM</a
+                >
+              </h3>
+              <p class="work-card__lede">
+                Browser-based animal discovery app with on-device image
+                recognition, breed catalogs, quizzes, and favorites — shipped
+                on Vercel.
+              </p>
+              <ul class="work-card__points">
+                <li>
+                  Client-side animal recognition with TensorFlow.js / MobileNet
+                  and Transformers running in the browser
+                </li>
+                <li>
+                  Discover, search, compare, and learn flows for dogs, cats,
+                  and wildlife with daily animal features
+                </li>
+                <li>
+                  Responsive React UI with Framer Motion, local favorites, and
+                  a live deploy at animal-kingdom-v1.vercel.app
+                </li>
+              </ul>
+              <p class="work-card__stack">
+                React · Vite · TensorFlow.js · Framer Motion · Tailwind · Vercel
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta">
+              <span class="work-card__index">02</span>
+              <span class="work-card__tag">Learning · Local-first</span>
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">
+                <a
+                  href="https://knowledge-vault-six.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >KNOWLEDGE VAULT</a
+                >
+              </h3>
+              <p class="work-card__lede">
+                Private workshop for interactive notes, a 3D knowledge graph,
+                and study tools — no account, no server database.
+              </p>
+              <ul class="work-card__points">
+                <li>
+                  Notes that run: HTML, CSS, and JavaScript execute inside each
+                  note (timers, quizzes, canvases)
+                </li>
+                <li>
+                  3D Sphere maps connections between notes so structure is
+                  visible, not just folders
+                </li>
+                <li>
+                  Flashcards and quizzes with SM-2 spaced repetition, stored
+                  privately in the browser via localStorage
+                </li>
+              </ul>
+              <p class="work-card__stack">
+                Next.js · TypeScript · Three.js · localStorage · Vercel
+              </p>
             </div>
           </article>
         </div>
@@ -671,22 +671,17 @@
         <div class="pre-loader-header">
           <div class="header">
             <h1>
-              full-stack
-              <span class="highlight1" data-text="builder">builder</span>,
+              hello
+              <span class="highlight1" data-text="there">there</span>,
             </h1>
             <div class="header-wrapper"></div>
           </div>
           <div class="header">
             <h1>
-              <span class="highlight2" data-text="ships">ships</span>
-              with polish
+              give me
+              <span class="highlight2" data-text="a sec">a sec</span>
             </h1>
             <div class="header-wrapper"></div>
-          </div>
-        </div>
-        <div class="pre-loader-btn">
-          <div class="btn">
-            Available for work
           </div>
         </div>
       </div>

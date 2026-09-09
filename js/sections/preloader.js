@@ -8,6 +8,7 @@ const counterState = { value: 0 };
 let counterEl = null;
 let targetProgress = 0;
 let startTime = 0;
+let scrollLocked = false;
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -17,6 +18,65 @@ const whenWindowLoaded = () =>
     : new Promise((resolve) =>
         window.addEventListener("load", resolve, { once: true })
       );
+
+const SCROLL_KEYS = new Set([
+  " ",
+  "ArrowUp",
+  "ArrowDown",
+  "PageUp",
+  "PageDown",
+  "Home",
+  "End",
+]);
+
+function preventScrollInput(event) {
+  if (!scrollLocked) return;
+  event.preventDefault();
+}
+
+function preventScrollKey(event) {
+  if (!scrollLocked) return;
+  if (SCROLL_KEYS.has(event.key)) event.preventDefault();
+}
+
+export function lockPreloaderScroll() {
+  if (scrollLocked) {
+    if (window.lenis && typeof window.lenis.stop === "function") {
+      window.lenis.stop();
+    }
+    return;
+  }
+
+  scrollLocked = true;
+  document.documentElement.classList.add("is-preloading");
+  document.body.classList.add("is-preloading");
+
+  window.scrollTo(0, 0);
+  if (window.lenis && typeof window.lenis.scrollTo === "function") {
+    window.lenis.scrollTo(0, { immediate: true });
+    window.lenis.stop();
+  }
+
+  window.addEventListener("wheel", preventScrollInput, { passive: false });
+  window.addEventListener("touchmove", preventScrollInput, { passive: false });
+  window.addEventListener("keydown", preventScrollKey, { passive: false });
+}
+
+export function unlockPreloaderScroll() {
+  if (!scrollLocked) return;
+
+  scrollLocked = false;
+  document.documentElement.classList.remove("is-preloading");
+  document.body.classList.remove("is-preloading");
+
+  window.removeEventListener("wheel", preventScrollInput);
+  window.removeEventListener("touchmove", preventScrollInput);
+  window.removeEventListener("keydown", preventScrollKey);
+
+  if (window.lenis && typeof window.lenis.start === "function") {
+    window.lenis.start();
+  }
+}
 
 function renderCounter() {
   if (counterEl) counterEl.textContent = `${Math.round(counterState.value)}%`;
@@ -46,6 +106,7 @@ export function revealSite() {
       preloader.style.display = "none";
       preloader.style.visibility = "hidden";
       preloader.style.pointerEvents = "none";
+      unlockPreloaderScroll();
     },
   });
 }
@@ -55,9 +116,6 @@ export function playPreloaderIntro() {
     top: 0,
     ease: "power3.inOut",
     stagger: { amount: 0.3 },
-  }).to(".pre-loader-btn", 0.3, {
-    opacity: 1,
-    delay: 2,
   });
 }
 
@@ -116,6 +174,7 @@ export function playIntroEntrance() {
 export function initPreloader() {
   counterEl = document.querySelector(".pre-loader-progress__value");
   startTime = performance.now();
+  lockPreloaderScroll();
   renderCounter();
   playPreloaderIntro();
   advanceProgress(10);

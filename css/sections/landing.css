@@ -238,8 +238,8 @@
 }
 
 .content__img--1 {
-  aspect-ratio: 680/920;
-  filter: brightness(70%) saturate(70%);
+  aspect-ratio: 1 / 1;
+  filter: none;
 }
 
 .title-wrap {

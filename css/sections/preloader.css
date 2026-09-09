@@ -1,4 +1,12 @@
-﻿.pre-loader {
+﻿html.is-preloading,
+html.is-preloading body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  height: 100%;
+  touch-action: none;
+}
+
+.pre-loader {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -11,6 +19,8 @@
   z-index: 10000;
   opacity: 1;
   visibility: visible;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .pre-loader-container {

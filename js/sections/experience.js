@@ -71,15 +71,15 @@ export function initExperienceMotion() {
   gsap.registerPlugin(ScrollTrigger);
 
   observeRevealSection({
-    headerSelector: ".work__header",
-    itemSelector: ".work-card",
-    headerTitlesSelector: ".work__header .title",
-  });
-
-  observeRevealSection({
     headerSelector: ".experience__header",
     itemSelector: ".experience-role",
     headerTitlesSelector: ".experience__header .title",
+  });
+
+  observeRevealSection({
+    headerSelector: ".work__header",
+    itemSelector: ".work-card",
+    headerTitlesSelector: ".work__header .title",
   });
 }
 
