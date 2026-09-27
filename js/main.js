@@ -10,6 +10,7 @@ import {
 import { initAbout } from "./sections/about.js";
 import { initSkills } from "./sections/skills.js";
 import { initTechStack } from "./sections/stack.js";
+import { initCertificatesMotion } from "./sections/certificates.js";
 import { initExperience, initExperienceMotion } from "./sections/experience.js";
 import { initContact, initContactMotion } from "./sections/contact.js";
 
@@ -47,6 +48,7 @@ const boot = async () => {
   // Holds the preloader until every resource has loaded, then reveals the site
   await finishPreloader();
 
+  initCertificatesMotion();
   initExperienceMotion();
   initContactMotion();
   refreshScroll();

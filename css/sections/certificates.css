@@ -1,0 +1,448 @@
+.certs {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background: #0a0a0a;
+  padding: 8vh 0 0;
+}
+
+.certs__intro {
+  width: min(960px, calc(100% - 2.5rem));
+  margin: 0 auto 4vh;
+}
+
+.certs__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.35em;
+  margin-bottom: 0.75rem;
+}
+
+.certs__header .title {
+  color: #b9284d;
+  font-size: clamp(2.75rem, 10vw, 6rem);
+  text-indent: 0;
+  line-height: 0.95;
+}
+
+.certs__lede {
+  margin: 0;
+  max-width: 36ch;
+  font-family: "tenon", sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.08rem);
+  line-height: 1.45;
+  color: rgba(226, 210, 195, 0.62);
+}
+
+.certs__pin {
+  position: relative;
+  width: 100%;
+  background: #0a0a0a;
+  box-sizing: border-box;
+}
+
+.certs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  width: min(960px, calc(100% - 2.5rem));
+  margin: 0 auto 1.5rem;
+}
+
+.certs__tick {
+  appearance: none;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.35rem 0;
+  border: 0;
+  background: transparent;
+  color: rgba(226, 210, 195, 0.42);
+  font-family: "tenon", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.certs__tick:hover {
+  color: #f4ebe3;
+}
+
+.certs__tick:active {
+  transform: scale(0.98);
+}
+
+.certs__tick:focus-visible {
+  outline: 2px solid #e0456f;
+  outline-offset: 3px;
+}
+
+.certs__tick-index {
+  font-family: "stinger-variable", sans-serif;
+  font-size: 0.95rem;
+  font-variation-settings: "wdth" 120, "wght" 400;
+  letter-spacing: -0.03em;
+  color: rgba(224, 69, 111, 0.55);
+}
+
+.certs__tick.is-active {
+  color: #f4ebe3;
+}
+
+.certs__tick.is-active .certs__tick-index {
+  color: #e0456f;
+}
+
+.certs__stage {
+  position: relative;
+  width: min(1120px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.cert-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(16rem, 0.88fr);
+  gap: clamp(1.25rem, 3vw, 3.25rem);
+  align-items: center;
+  margin: 0 auto 5.5rem;
+}
+
+.cert-slide__frame {
+  margin: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-slide__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(58vh, 560px);
+  object-fit: contain;
+  box-shadow: 0 18px 36px rgba(80, 16, 32, 0.28);
+}
+
+.gc-badge {
+  container-type: inline-size;
+  width: min(100%, 34rem);
+  aspect-ratio: 1000 / 909;
+  max-height: min(58vh, 560px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9% 9% 7%;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 1.35rem;
+  box-shadow: 0 18px 36px rgba(80, 16, 32, 0.22);
+  color: #3c4043;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+
+.gc-badge__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6cqw;
+  margin-bottom: 8%;
+}
+
+.gc-badge__logo {
+  display: block;
+  height: 6.6cqw;
+  width: auto;
+}
+
+.gc-badge__cloud {
+  font-size: 6.1cqw;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #5f6368;
+}
+
+.gc-badge__title {
+  margin: 0 0 9%;
+  max-width: 16ch;
+  font-size: 6.5cqw;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #3c4043;
+}
+
+.gc-badge__seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2cqw;
+  margin-bottom: 6%;
+}
+
+.gc-badge__rule {
+  width: 9cqw;
+  height: 2px;
+  background: #dadce0;
+}
+
+.gc-badge__check {
+  width: 8.2cqw;
+  height: 8.2cqw;
+  display: block;
+}
+
+.gc-badge__kind {
+  margin: 0;
+  font-size: 3.15cqw;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.cert-slide__copy {
+  min-width: 0;
+}
+
+.cert-slide__issuer {
+  margin: 0 0 0.55rem;
+  font-family: "tenon", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: rgba(224, 69, 111, 0.92);
+}
+
+.cert-slide__title {
+  margin: 0 0 0.7rem;
+  font-family: "stinger-variable", sans-serif;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  font-variation-settings: "wdth" 118, "wght" 400;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #f4ebe3;
+  text-wrap: balance;
+}
+
+.cert-slide__meta {
+  margin: 0 0 1rem;
+  font-family: "tenon", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(226, 210, 195, 0.48);
+}
+
+.cert-slide__learned {
+  margin: 0;
+  max-width: 38ch;
+  font-family: "tenon", sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.55;
+  color: rgba(226, 210, 195, 0.78);
+}
+
+.cert-slide__learned span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #e0456f;
+  font-size: 0.82rem;
+}
+
+.certs__bar {
+  display: none;
+}
+
+.certs--motion .certs__pin {
+  display: grid;
+  grid-template-columns: minmax(8.75rem, 11.5rem) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) 2px;
+  column-gap: clamp(1rem, 2.5vw, 2.5rem);
+  row-gap: 1rem;
+  align-items: center;
+  height: 100dvh;
+  padding: clamp(1.25rem, 4vh, 2.75rem) clamp(1.15rem, 3.5vw, 3.5rem)
+    clamp(0.85rem, 2.5vh, 1.5rem);
+  overflow: hidden;
+}
+
+.certs--motion .certs__nav {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: center;
+  gap: 0.15rem;
+  width: auto;
+  margin: 0;
+}
+
+.certs--motion .certs__stage {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  perspective: 1400px;
+}
+
+.certs--motion .cert-slide {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  margin: 0;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.certs--motion .cert-slide__frame {
+  height: 100%;
+}
+
+.certs--motion .cert-slide__frame img,
+.certs--motion .gc-badge {
+  max-height: min(68vh, 640px);
+}
+
+.certs--motion .certs__bar {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: block;
+  height: 2px;
+  background: rgba(185, 40, 77, 0.22);
+}
+
+.certs--motion .certs__bar span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #b9284d;
+  transform: scaleX(0.04);
+  transform-origin: left center;
+}
+
+@media screen and (max-width: 800px) {
+  .certs {
+    padding-top: 6vh;
+  }
+
+  .certs__intro {
+    width: calc(100% - 2rem);
+  }
+
+  .certs__header {
+    justify-content: center;
+  }
+
+  .certs__header .title {
+    font-size: clamp(2.5rem, 14vw, 3.75rem);
+  }
+
+  .certs__lede {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .certs__nav {
+    width: calc(100% - 2rem);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .certs__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .certs__tick {
+    flex: 0 0 auto;
+  }
+
+  .cert-slide,
+  .certs__stage {
+    width: calc(100% - 2rem);
+  }
+
+  .cert-slide {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin-bottom: 4rem;
+  }
+
+  .cert-slide__frame img,
+  .gc-badge {
+    max-height: 46vh;
+  }
+
+  .cert-slide__learned {
+    max-width: none;
+  }
+
+  .certs--motion .certs__pin {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr) 2px;
+    align-items: stretch;
+    padding: 1rem 0 0.85rem;
+    column-gap: 0;
+    row-gap: 0.65rem;
+  }
+
+  .certs--motion .certs__nav {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    align-self: start;
+    padding-bottom: 0.15rem;
+  }
+
+  .certs--motion .certs__stage {
+    grid-column: 1;
+    grid-row: 2;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
+
+  .certs--motion .cert-slide {
+    grid-template-rows: auto auto;
+    align-content: center;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .certs--motion .cert-slide__frame {
+    max-height: 34vh;
+  }
+
+  .certs--motion .cert-slide__frame img,
+  .certs--motion .gc-badge {
+    max-height: 34vh;
+  }
+
+  .certs--motion .cert-slide__title {
+    font-size: 1.2rem;
+  }
+
+  .certs--motion .cert-slide__learned {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .certs--motion .certs__bar {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+  }
+}

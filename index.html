@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harzhedzmi Gani</title>
+    <link rel="icon" href="./img/hg-logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./img/hg-logo.png" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/vendor/gsap.min.js"></script>
     <script src="./js/vendor/modernizr.custom.js"></script>
@@ -236,6 +238,265 @@
           </div>
         </div>
       </div>
+
+      <section
+        class="certs"
+        id="certificates"
+        aria-labelledby="certs-title-up certs-title-down"
+      >
+        <div class="certs__intro">
+          <div class="certs__header title-wrap">
+            <span class="title title--up" id="certs-title-up">My</span>
+            <span class="title title--down" id="certs-title-down"
+              >Certificates</span
+            >
+          </div>
+          <p class="certs__lede">What each course left me with.</p>
+        </div>
+
+        <div class="certs__pin">
+          <nav class="certs__nav" aria-label="Certificates">
+            <button type="button" class="certs__tick is-active">
+              <span class="certs__tick-index">01</span>
+              <span class="certs__tick-label">Explore data</span>
+            </button>
+            <button type="button" class="certs__tick">
+              <span class="certs__tick-index">02</span>
+              <span class="certs__tick-label">Advanced SQL</span>
+            </button>
+            <button type="button" class="certs__tick">
+              <span class="certs__tick-index">03</span>
+              <span class="certs__tick-label">LookML</span>
+            </button>
+            <button type="button" class="certs__tick">
+              <span class="certs__tick-index">04</span>
+              <span class="certs__tick-label">Python</span>
+            </button>
+            <button type="button" class="certs__tick">
+              <span class="certs__tick-index">05</span>
+              <span class="certs__tick-label">Raspberry Pi</span>
+            </button>
+            <button type="button" class="certs__tick">
+              <span class="certs__tick-index">06</span>
+              <span class="certs__tick-label">Anonymity</span>
+            </button>
+          </nav>
+
+          <div class="certs__stage">
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <div
+                  class="gc-badge"
+                  role="img"
+                  aria-label="Google Cloud completion badge for Exploring and Preparing your Data with BigQuery"
+                >
+                  <div class="gc-badge__brand">
+                    <svg class="gc-badge__logo" viewBox="0 0 74 24" aria-hidden="true">
+                      <path fill="#4285F4" d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z"/>
+                      <path fill="#EA4335" d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#4285F4" d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.5 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z"/>
+                      <path fill="#FBBC05" d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#34A853" d="M58 .24h2.51v17.57H58z"/>
+                      <path fill="#EA4335" d="M68.26 15.52c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z"/>
+                    </svg>
+                    <span class="gc-badge__cloud">Cloud</span>
+                  </div>
+                  <p class="gc-badge__title">
+                    Exploring and<br />Preparing your Data<br />with BigQuery
+                  </p>
+                  <div class="gc-badge__seal">
+                    <span class="gc-badge__rule"></span>
+                    <svg class="gc-badge__check" viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="12" cy="12" r="12" fill="#1a73e8" />
+                      <path d="M7.1 12.3 10.2 15.4 16.9 8.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="gc-badge__rule"></span>
+                  </div>
+                  <p class="gc-badge__kind">Completion badge</p>
+                </div>
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">Google Cloud</p>
+                <h3 class="cert-slide__title">
+                  Exploring and Preparing your Data with BigQuery
+                </h3>
+                <p class="cert-slide__meta">Completion badge</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  How to inspect large tables in BigQuery, filter noise, and
+                  shape columns in SQL before anything is built on top of them.
+                </p>
+              </div>
+            </article>
+
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <div
+                  class="gc-badge"
+                  role="img"
+                  aria-label="Google Cloud completion badge for Achieving Advanced Insights with BigQuery"
+                >
+                  <div class="gc-badge__brand">
+                    <svg class="gc-badge__logo" viewBox="0 0 74 24" aria-hidden="true">
+                      <path fill="#4285F4" d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z"/>
+                      <path fill="#EA4335" d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#4285F4" d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.5 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z"/>
+                      <path fill="#FBBC05" d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#34A853" d="M58 .24h2.51v17.57H58z"/>
+                      <path fill="#EA4335" d="M68.26 15.52c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z"/>
+                    </svg>
+                    <span class="gc-badge__cloud">Cloud</span>
+                  </div>
+                  <p class="gc-badge__title">
+                    Achieving Advanced<br />Insights with BigQuery
+                  </p>
+                  <div class="gc-badge__seal">
+                    <span class="gc-badge__rule"></span>
+                    <svg class="gc-badge__check" viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="12" cy="12" r="12" fill="#1a73e8" />
+                      <path d="M7.1 12.3 10.2 15.4 16.9 8.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="gc-badge__rule"></span>
+                  </div>
+                  <p class="gc-badge__kind">Completion badge</p>
+                </div>
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">Google Cloud</p>
+                <h3 class="cert-slide__title">
+                  Achieving Advanced Insights with BigQuery
+                </h3>
+                <p class="cert-slide__meta">Completion badge</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  Window functions and grouped queries that turn a cleaned
+                  table into a number a team can use.
+                </p>
+              </div>
+            </article>
+
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <div
+                  class="gc-badge"
+                  role="img"
+                  aria-label="Google Cloud completion badge for Developing Data Models with LookML"
+                >
+                  <div class="gc-badge__brand">
+                    <svg class="gc-badge__logo" viewBox="0 0 74 24" aria-hidden="true">
+                      <path fill="#4285F4" d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z"/>
+                      <path fill="#EA4335" d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#4285F4" d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.81c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.5 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z"/>
+                      <path fill="#FBBC05" d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z"/>
+                      <path fill="#34A853" d="M58 .24h2.51v17.57H58z"/>
+                      <path fill="#EA4335" d="M68.26 15.52c-1.3 0-2.22-.59-2.82-1.76l7.77-3.21-.26-.66c-.48-1.3-1.96-3.7-4.97-3.7-2.99 0-5.48 2.35-5.48 5.81 0 3.26 2.46 5.81 5.76 5.81 2.66 0 4.2-1.63 4.84-2.57l-1.98-1.32c-.66.96-1.56 1.6-2.86 1.6zm-.18-7.15c1.03 0 1.91.53 2.2 1.28l-5.25 2.17c0-2.44 1.73-3.45 3.05-3.45z"/>
+                    </svg>
+                    <span class="gc-badge__cloud">Cloud</span>
+                  </div>
+                  <p class="gc-badge__title">
+                    Developing Data<br />Models with LookML
+                  </p>
+                  <div class="gc-badge__seal">
+                    <span class="gc-badge__rule"></span>
+                    <svg class="gc-badge__check" viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="12" cy="12" r="12" fill="#1a73e8" />
+                      <path d="M7.1 12.3 10.2 15.4 16.9 8.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="gc-badge__rule"></span>
+                  </div>
+                  <p class="gc-badge__kind">Completion badge</p>
+                </div>
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">Google Cloud</p>
+                <h3 class="cert-slide__title">
+                  Developing Data Models with LookML
+                </h3>
+                <p class="cert-slide__meta">Completion badge</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  How to define views, dimensions, and measures so people query
+                  one shared model instead of rewriting SQL for every report.
+                </p>
+              </div>
+            </article>
+
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <img
+                  src="./img/certificates/python.png"
+                  alt="EC-Council certificate for Python for Absolute Beginners, number 160816, May 5, 2022"
+                  width="1024"
+                  height="773"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">EC-Council · Codered</p>
+                <h3 class="cert-slide__title">Python for Absolute Beginners</h3>
+                <p class="cert-slide__meta">May 5, 2022 · No. 160816</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  Syntax, types, control flow, and functions. The first
+                  structured pass at Python, and still how I script the small
+                  jobs.
+                </p>
+              </div>
+            </article>
+
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <img
+                  src="./img/certificates/raspberry-pi.png"
+                  alt="EC-Council certificate for Introduction to Raspberry Pi, number 161758, May 17, 2022"
+                  width="1024"
+                  height="773"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">EC-Council · Codered</p>
+                <h3 class="cert-slide__title">Introduction to Raspberry Pi</h3>
+                <p class="cert-slide__meta">May 17, 2022 · No. 161758</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  Linux on a small board, and how code talks to pins and
+                  peripherals when a product leaves the browser.
+                </p>
+              </div>
+            </article>
+
+            <article class="cert-slide">
+              <figure class="cert-slide__frame">
+                <img
+                  src="./img/certificates/anonymity.png"
+                  alt="EC-Council certificate for Introduction to Dark Web, Anonymity, and Cryptocurrency, number 161772, May 17, 2022"
+                  width="1024"
+                  height="773"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="cert-slide__copy">
+                <p class="cert-slide__issuer">EC-Council · Codered</p>
+                <h3 class="cert-slide__title">
+                  Introduction to Dark Web, Anonymity, and Cryptocurrency
+                </h3>
+                <p class="cert-slide__meta">May 17, 2022 · No. 161772</p>
+                <p class="cert-slide__learned">
+                  <span>Learned</span>
+                  How anonymity networks and cryptocurrency are used, and what
+                  that means for auth, payments, and abuse resistance.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="certs__bar" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
 
       <section class="experience">
         <div class="experience__header title-wrap">
